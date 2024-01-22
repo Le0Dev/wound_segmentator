@@ -1,5 +1,4 @@
 
-
 # Sound Segmentator   
 This code was written as part of a personal project. The idea is to create a semi-automated image annotation pipeline. 
 In this context, the first part of this project consists of carrying out a binary semantic segmentation of the wounds of an image. 
@@ -7,6 +6,8 @@ As it stands, all of the code has not yet been completely written, there are sti
 but the latter should allow you to train a functional model!
 
 ## Installation
+
+works fine with cuda 11.6 and torch 1.13.0
 
 ```bash
 # create and run virtual env
@@ -17,6 +18,8 @@ conda activate $ENVNAME
 # project installation
 cd your_local_wound_segmentator_repo
 pip install git+https://github.com/Le0Dev/wound_segmentator.git
+
+pip install -r requirements.txt
 ```
 
 ## Download the data
@@ -33,6 +36,13 @@ https://drive.google.com/file/d/1diaAmDV7voPlDVHt0UfFE_ZD7XxqJnLF/view?usp=shari
 <details>
 <summary>Attention-Unet</summary>
 <IMG src="./plots/iou_plot.png"/>
+ train_size = 2208 images (val_ratio = 0.2), 
+ img_size = 256,
+ criterion = DiceBCELoss,  
+ batch size = 8,
+ epochs = 150,
+ criterion = DiceBCELoss,
+ GPU: RTX3070Ti 
 </details>
 
 ## Inference
@@ -46,6 +56,9 @@ Some code comes from these projects:
 - Losses: https://www.kaggle.com/code/bigironsphere/loss-function-library-keras-pytorch
 
 The data that has been used or modified in this project comes from these 3 works:
+ - 374 images annotated from [1]
+ - 1210 images (including 210 masks newly annotated) from [2]
+ - 1176 images and masks refined from [3]
 
 [1] Thomas, S. Stock pictures of wounds. Medetec Wound Database (2020). http://www.medetec.co.uk/files/medetec-image-databases.html
 
