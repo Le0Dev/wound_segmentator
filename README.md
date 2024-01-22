@@ -1,2 +1,59 @@
-# wound_segmentator
+
+
+# Sound Segmentator   
+This code was written as part of a personal project. The idea is to create a semi-automated image annotation pipeline. 
+In this context, the first part of this project consists of carrying out a binary semantic segmentation of the wounds of an image. 
+As it stands, all of the code has not yet been completely written, there are still various optimizations and pieces of code to write 
+but the latter should allow you to train a functional model!
+
+## Installation
+
+```bash
+# create and run virtual env
+ENVNAME="wound_segmentator_env"
+conda create -n $ENVNAME python==3.9.18 -y
+conda activate $ENVNAME
+
+# project installation
+cd your_local_wound_segmentator_repo
+pip install git+https://github.com/Le0Dev/wound_segmentator.git
+```
+
+## Download the data
+https://drive.google.com/file/d/1Npv4r5KZQzC1wYMeAjT6LKrOLkQb9Vdd/view?usp=sharing
+
+## Training
+```bash
+# train command example
+python train.py --data_path "./data/" --learning_rate 0.0001 --batch_size 8 --epochs 100 --img_size 256
+```
+
+Here you can download the pretrained weigths of Attention-Unet (mIoU of 0.71 over 552 test images)
+https://drive.google.com/file/d/1diaAmDV7voPlDVHt0UfFE_ZD7XxqJnLF/view?usp=sharing
+<details>
+<summary>Attention-Unet</summary>
+<IMG src="./plots/iou_plot.png"/>
+</details>
+
+## Inference
+Run the inference.ipynb notebook
+
+## Citation   
+Some code comes from these projects:
+
+- Model implementations: https://github.com/LeeJunHyun/Image_Segmentation
+ 
+- Losses: https://www.kaggle.com/code/bigironsphere/loss-function-library-keras-pytorch
+
+The data that has been used or modified in this project comes from these 3 works:
+
+[1] Thomas, S. Stock pictures of wounds. Medetec Wound Database (2020). http://www.medetec.co.uk/files/medetec-image-databases.html
+
+[2] Wang, C., Anisuzzaman, D.M., Williamson, V. et al. Fully automatic wound segmentation with deep convolutional neural networks. Sci Rep 10, 21897 (2020). https://doi.org/10.1038/s41598-020-78799-w
+
+[3] S. R. Oota, V. Rowtula, S. Mohammed, M. Liu and M. Gupta, "WSNet: Towards An Effective Method for Wound Image Segmentation," 2023 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), Waikoloa, HI, USA, 2023, pp. 3233-3242, doi: [10.1109/WACV56688.2023.00325](https://ieeexplore.ieee.org/document/10030591)https://ieeexplore.ieee.org/document/10030591
+
+
+
+
  
