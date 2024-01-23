@@ -1,13 +1,9 @@
 
 # Wound Segmentator   
-This code was written as part of a personal project: create a semi-automated image annotation pipeline. 
-In this context, the first part of this project consists of carrying out a binary semantic segmentation on wounds images. 
-As it stands, all of the code has not yet been completely written, there are still various optimizations and pieces of code to write 
-but the latter should allow you to train a functional model!
+This code allows you to train a segmentation model to predict wound areas on images.
 
 ## Installation
-
-works fine with cuda 11.6 and torch 1.13.0
+This code works fine on a cuda 11.6 and torch 1.13.0 version setup
 
 ```bash
 # create and run virtual env
@@ -16,13 +12,13 @@ conda create -n $ENVNAME python==3.9.18 -y
 conda activate $ENVNAME
 
 # project installation
-cd your_local_wound_segmentator_repo
+cd path/to/your/local/project/repository
 pip install git+https://github.com/Le0Dev/wound_segmentator.git
-
 pip install -r requirements.txt
 ```
 
 ## Download the data
+Here you can find the splitted dataset: 
 https://drive.google.com/file/d/1Npv4r5KZQzC1wYMeAjT6LKrOLkQb9Vdd/view?usp=sharing
 
 ## Training
@@ -31,28 +27,27 @@ https://drive.google.com/file/d/1Npv4r5KZQzC1wYMeAjT6LKrOLkQb9Vdd/view?usp=shari
 python train.py --data_path "./data/" --learning_rate 0.0001 --batch_size 8 --epochs 100 --img_size 256
 ```
 
-Here you can download the pretrained weigths of Attention-Unet (mIoU of 0.71 over 552 test images)
+Here you can download the pretrained weigths of an Attention-Unet (mean IoU of 0.71 over 552 test images)
 https://drive.google.com/file/d/1diaAmDV7voPlDVHt0UfFE_ZD7XxqJnLF/view?usp=sharing
 <details>
 <summary>Attention-Unet</summary>
 <IMG src="./plots/iou_plot.png"/>
- train_size = 2208 images (val_ratio = 0.2), 
- img_size = 256,
- criterion = DiceBCELoss,  
- batch size = 8,
- epochs = 150,
- criterion = DiceBCELoss,
- GPU: RTX3070Ti 
+train_size = 2208 images (validation ratio = 0.2), 
+img_size = 256,
+criterion = DiceBCELoss,  
+batch size = 8,
+epochs = 150,
+criterion = DiceBCELoss,
+trained on a RTX3070Ti 
 </details>
 
 ## Inference
-Run the inference.ipynb notebook
+inference.py not implemented yet. Please use inference.ipynb notebook instead.
 
 ## Citation   
 Some code comes from these projects:
 
 - Model implementations: https://github.com/LeeJunHyun/Image_Segmentation
- 
 - Losses: https://www.kaggle.com/code/bigironsphere/loss-function-library-keras-pytorch
 
 The data that has been used or modified in this project comes from these 3 works:
