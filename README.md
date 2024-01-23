@@ -1,6 +1,12 @@
 
 # Wound Segmentator   
 This code allows you to train a segmentation model to predict wound areas on images.
+>[!WARNING]  
+>This prediction example contains wound images that may be graphic.
+><details>
+><summary>Example </summary>
+><IMG src="./pred_example.PNG"/>
+></details>
 
 ## Installation
 This code works fine on a cuda 11.6 and torch 1.13.0 version setup
