@@ -32,13 +32,12 @@ https://drive.google.com/file/d/1diaAmDV7voPlDVHt0UfFE_ZD7XxqJnLF/view?usp=shari
 <details>
 <summary>Attention-Unet</summary>
 <IMG src="./plots/iou_plot.png"/>
-train_size = 2208 images (validation ratio = 0.2), 
+Training config: training set size = 2208 images (validation ratio = 0.2), 
 img_size = 256,
 criterion = DiceBCELoss,  
 batch size = 8,
 epochs = 150,
-criterion = DiceBCELoss,
-trained on a RTX3070Ti 
+trained on a RTX3070Ti gpu
 </details>
 
 ## Inference
@@ -54,6 +53,7 @@ The data that has been used or modified in this project comes from these 3 works
  - 374 images annotated from [1]
  - 1210 images (including 210 masks newly annotated) from [2]
  - 1176 images and masks refined from [3]
+You can find the correspondance with the original dataset ids in correspondence_table.xlsx
 
 [1] Thomas, S. Stock pictures of wounds. Medetec Wound Database (2020). http://www.medetec.co.uk/files/medetec-image-databases.html
 
