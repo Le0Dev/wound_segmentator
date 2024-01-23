@@ -11,7 +11,7 @@ In this context, the first part of this project consists of carrying out a binar
 As it stands, all of the code has not yet been completely written, there are still various optimizations and pieces of code to write 
 but the latter should allow you to train a functional model!
 
-Command-line example: 'python train.py --data_path "./data/" --learning_rate 0.0001 --batch_size 8 --epochs 2 --img_size 256'
+Command-line example: 'python train.py --data_path "./data/" --learning_rate 0.0001 --batch_size 8 --epochs 100 --img_size 256'
 
 Not yet implemented in command-line arguments:
     - models.py contains other networks (U_Net, R2U_Net, R2AttU_Net), you can use these architectures by calling them in this script.
