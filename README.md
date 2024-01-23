@@ -1,5 +1,5 @@
 
-# Sound Segmentator   
+# Wound Segmentator   
 This code was written as part of a personal project: create a semi-automated image annotation pipeline. 
 In this context, the first part of this project consists of carrying out a binary semantic segmentation on wounds images. 
 As it stands, all of the code has not yet been completely written, there are still various optimizations and pieces of code to write 
