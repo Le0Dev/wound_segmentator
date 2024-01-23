@@ -53,6 +53,7 @@ The data that has been used or modified in this project comes from these 3 works
  - 374 images annotated from [1]
  - 1210 images (including 210 masks newly annotated) from [2]
  - 1176 images and masks refined from [3]
+
 You can find the correspondance with the original dataset ids in correspondence_table.xlsx
 
 [1] Thomas, S. Stock pictures of wounds. Medetec Wound Database (2020). http://www.medetec.co.uk/files/medetec-image-databases.html
