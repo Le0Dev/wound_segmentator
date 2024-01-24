@@ -47,7 +47,7 @@ trained on a RTX3070Ti gpu
 </details>
 
 ## Inference
-inference.py not implemented yet. Please use inference.ipynb notebook instead.
+inference.py is not implemented yet. Please use inference.ipynb notebook instead.
 
 ## Citation   
 Some code comes from these projects:
