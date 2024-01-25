@@ -24,6 +24,7 @@ pip install -r requirements.txt
 ```
 
 ## Download the data
+Images dimensions = 512x512
 Here you can find the splitted dataset: 
 https://drive.google.com/file/d/1Npv4r5KZQzC1wYMeAjT6LKrOLkQb9Vdd/view?usp=sharing
 
