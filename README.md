@@ -19,7 +19,7 @@ conda activate $ENVNAME
 
 # project installation
 cd path/to/your/local/project/repository
-pip install git+https://github.com/Le0Dev/wound_segmentator.git
+git clone https://github.com/Le0Dev/wound_segmentator.git
 pip install -r requirements.txt
 ```
 
