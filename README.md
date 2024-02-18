@@ -1,5 +1,7 @@
+![logo_wound](https://github.com/Le0Dev/wound_segmentator/assets/39364891/a77dd46e-cd9d-4546-8668-a9691faa38ff)
 
-# Wound Segmentator   
+# Wound Segmentator
+
 This code allows you to train a segmentation model to predict wound areas on images.
 >[!WARNING]  
 >This prediction example contains wound images that may be graphic.
@@ -24,9 +26,8 @@ pip install -r requirements.txt
 ```
 
 ## Download the data
-Images dimensions = 512x512
 Here you can find the splitted dataset: 
-https://drive.google.com/file/d/1Npv4r5KZQzC1wYMeAjT6LKrOLkQb9Vdd/view?usp=sharing
+https://www.kaggle.com/datasets/leoscode/wound-segmentation-images
 
 ## Training
 ```bash
