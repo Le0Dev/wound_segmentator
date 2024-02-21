@@ -52,17 +52,6 @@ trained on a RTX3070Ti gpu
 inference.py is not implemented yet. Please use inference.ipynb notebook instead.
 
 ## Citation   
-Some code comes from these projects:
-
-- Model implementations: https://github.com/LeeJunHyun/Image_Segmentation
-- Losses: https://www.kaggle.com/code/bigironsphere/loss-function-library-keras-pytorch
-
-The data that has been used or modified in this project comes from these 3 works:
- - 374 images annotated from [1]
- - 1210 images (including 210 masks newly annotated) from [2]
- - 1176 images and masks refined from [3]
-
-You can find the correspondance with the original dataset ids in correspondence_table.xlsx
 
 [1] Thomas, S. Stock pictures of wounds. Medetec Wound Database (2020). http://www.medetec.co.uk/files/medetec-image-databases.html
 
